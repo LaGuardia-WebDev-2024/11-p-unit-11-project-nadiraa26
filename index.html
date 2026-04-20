@@ -6,7 +6,7 @@ Requirements
 [  ] Include Three Images
 
 Select ONE Additional 
-[ no ] Feature 1 - Use .hide() & .show() method
+[ yes ] Feature 1 - Use .hide() & .show() method
 [ no ] Feature 2 - Use .addClass() method
 [ no ] Feature 3 - Use .slideDown() method
 [ no ] Feature 4 - Use .mouseover() method
@@ -17,49 +17,73 @@ Select ONE Additional
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Unit 11 Project</title>
+    <title>Top 3 Animated Movies</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">Memory #1</button>
-    <button id="mem2-button">Memory #2</button>
-    <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <button id="mov1-button">Movie #1</button>
+    <button id="mov2-button">Movie #2</button>
+    <button id="mov3-button">Movie #3</button>
+    <h1>My Top 3 Animated Movies <span>Of the 21st Century</span></h1>
+
+    <img
+    
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <h3 id="mov1">Zootopia</h3>
+        <p>Synopsis: A rabbit named Judy moves to the big city to become a police officer. She wants to prove that she is brave even though she is small. Judy teams up with a fox named Nick to solve a mystery. They find out that some animals are going missing for a secret reason. In the end, they save the city and become a team.</p>
+      <img class="1stMovie"src="https://d23.com/app/uploads/2025/11/HEADER-Z2-meet-the-characters.jpg" width="400">
       </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="mov2">Coraline</h3>
+        <p>Synopsis: A young girl named Coraline moves into an old house and feels bored. She finds a secret door that leads to a different, magical version of her life. At first, everything seems perfect, but the "Other Mother" wants to keep Coraline forever. Coraline must be brave to save her real parents and escape the trap. She learns that home is where she truly belongs. </p>
+      <img class="2ndMovie"src="https://www.hollywoodreporter.com/wp-content/uploads/2022/10/Halloween-List-Coraline-Everett-MCDCORA_EC001-H-2022.jpg?w=1296&h=730&crop=1"width="400">
       </li>
 
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <h3 id="mov3">How to Train Your Dragon</h3>
+        <p>Synopsis: Hiccup is a young Viking who does not fit in because he is not a strong fighter. Instead of killing a dragon, he makes friends with a dangerous Night Fury named Toothless. Hiccup learns that dragons are misunderstood creatures and trains Toothless. He shows his village that Vikings and dragons can live together happily. Finally, Hiccup becomes a hero and brings peace to his island.</p>
+      <img class="3rdMovie"src="https://cdn.theatlantic.com/thumbor/FnhSLIcjcZL2f03CA_-Bn8uBgXQ=/229x0:1549x742/960x540/media/img/mt/2019/02/dragon2/original.jpg"width="400">
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $(".1stMovie").hide();
+      $(".2ndMovie").hide();
+      $(".3rdMovie").hide();
+
+      //=================List
+      $("li").css("color","blue");
+
 
       // ======================== Button #1
-      $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+      $("#mov1-button").click(function () {
+        $("#mov1").css("color", "red");
+        $("#mov1").text("The Second Movie Came Out Last Year!🎉");
+      $(".1stMovie").show(2000);
       });
 
       // ======================== Button #2
-      $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+      $("#mov2-button").click(function () {
+        $("#mov2").css("color", "black");
+        $("#mov2").text("It Is a Stop Motion Film!🎉");
+      $(".2ndMovie").show(2000);
       });
 
       // ======================== Button #3
-      $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
-        $("#mem3").text("Coding Parties! 🎉");
+      $("#mov3-button").click(function () {
+        $("#mov3").css("color", "white");
+        $("#mov3").text("There are 3 Animated Movies and a Live Action!🎉");
+      $(".3rdMovie").show(2000);
       });
+
+      //===========image
+      $("img").attr(
+        "src",
+        "https://static.wixstatic.com/media/330c0f_d4f371262b9449628b1d137760c5948d~mv2.jpg/v1/fill/w_670,h_376,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/330c0f_d4f371262b9449628b1d137760c5948d~mv2.jpg"
+      );
 
 
     </script>
